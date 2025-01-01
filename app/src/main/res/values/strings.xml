@@ -1,3 +1,35 @@
 <resources>
     <string name="app_name">Unwind app work</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+
+    <string-array name="languages">
+        <item>English</item>
+        <item>Hinglish</item>
+        <item>Assamese</item>
+        <item>Bengali</item>
+        <item>Bodo</item>
+        <item>Bhojpuri</item>
+        <item>Dogri</item>
+        <item>Gujarati</item>
+        <item>Hindi</item>
+        <item>Kannada</item>
+        <item>Kashmiri</item>
+        <item>Konkani</item>
+        <item>Maithili</item>
+        <item>Malayalam</item>
+        <item>Manipuri</item>
+        <item>Marathi</item>
+        <item>Nepali</item>
+        <item>Odia</item>
+        <item>Punjabi</item>
+        <item>Sanskrit</item>
+        <item>Santali</item>
+        <item>Sindhi</item>
+        <item>Tamil</item>
+        <item>Telgu</item>
+        <item>Urdu</item>
+    </string-array>
 </resources>

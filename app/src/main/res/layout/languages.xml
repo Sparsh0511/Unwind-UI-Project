@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -12,6 +10,7 @@
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingVertical="14dp"
         android:background="#2B1747"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,48 +36,36 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Rewards"
-                android:textColor="@color/white" />
+                android:text="Languages"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#2B1747"
+                android:contentDescription="menu"
+                android:src="@drawable/menu"
+                android:layout_gravity="end"
+                app:tint="@color/white" />
 
         </LinearLayout>
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/rewards_tab_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#2B1747"
-            app:tabTextAppearance="@style/CustomTabTextStyle"
-            app:tabTextColor="@color/white"
-            >
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/coupon_tab_item"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Coupons" />
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/unwinned_coins_tab_item"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="Unwinned coins" />
-
-        </com.google.android.material.tabs.TabLayout>
-
     </LinearLayout>
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/rewards_content_view_pager"
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/header"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout="@layout/unwinned_coins_layout_rewards_section"
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/languagesRecyclerView"
+        android:layout_marginTop="8dp"
+        tools:listitem="@layout/languages_single_item"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/trackOrder"
+        android:title="Track Order"/>
+
+    <item
+        android:id="@+id/demoVideos"
+        android:title="Demo Videos"/>
+
+    <item
+        android:id="@+id/referAFriend"
+        android:title="Refer a friend"/>
+
+    <item
+        android:id="@+id/languages"
+        android:title="Languages"/>
+
+    <item
+        android:id="@+id/rewards"
+        android:title="Reward"/>
+
+
+
+
+</menu>

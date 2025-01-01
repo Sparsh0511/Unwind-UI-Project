@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingHorizontal="8dp"
+    android:paddingVertical="4dp"
+    android:background="#F6F2FE"
+    android:layout_marginHorizontal="12dp"
+
+    >
+
+    <!-- Text for Language -->
+    <TextView
+        android:id="@+id/tvLanguage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Language"
+        android:textSize="16sp"
+        android:gravity="start"
+        android:layout_marginStart="12dp"
+        />
+
+    <!-- Radio Button -->
+    <RadioButton
+        android:id="@+id/rbLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>
