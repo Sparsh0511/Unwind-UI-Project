@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,9 +10,9 @@
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingVertical="14dp"
         android:background="#2B1747"
         android:orientation="vertical"
+        android:paddingVertical="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -36,18 +36,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Demo Videos"
-                android:textColor="@color/white"
                 android:layout_weight="1"
-                />
+                android:text="Demo Videos"
+                android:textColor="@color/white" />
 
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="end"
                 android:backgroundTint="#2B1747"
                 android:contentDescription="menu"
                 android:src="@drawable/menu"
-                android:layout_gravity="end"
                 app:tint="@color/white" />
 
         </LinearLayout>
@@ -55,32 +54,31 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/anyIssuesLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header"
-        android:id="@+id/anyIssuesLayout"
 
         >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textColor="@color/black"
-            android:text="Get help with payments, rewards\n and more"
             android:layout_gravity="center_vertical"
             android:layout_marginHorizontal="8dp"
+            android:text="Get help with payments, rewards\n and more"
+            android:textColor="@color/black"
+            android:textSize="16sp"
 
             />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/any_issue"
-            />
+            android:src="@drawable/any_issue" />
 
     </LinearLayout>
 
@@ -88,43 +86,58 @@
         android:id="@+id/anyIssueButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="48dp"
+        android:background="@drawable/custom_button_drawable"
         android:text="Are having any issue?"
         android:textAllCaps="false"
-        android:background="@drawable/custom_button_drawable"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/anyIssuesLayout"
-        android:layout_marginHorizontal="48dp"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/anyIssuesLayout" />
 
     <TextView
         android:id="@+id/topQuestionsTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="14dp"
         android:text="Top questions"
+        android:textColor="@color/black"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/anyIssueButton"
-        android:textColor="@color/black"
-        android:layout_marginStart="12dp"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="14dp"
-        />
-
+        app:layout_constraintTop_toBottomOf="@id/anyIssueButton" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/videosRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/topQuestionsTv"
-        android:layout_marginBottom="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginVertical="12dp"
+        android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/issuse_single_item"
-        tools:itemCount="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topQuestionsTv"
+        tools:listitem="@layout/video_row"
+
         />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/videosRecyclerView"
+        android:layout_marginTop="16dp"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/issue_article_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
 
 
 
